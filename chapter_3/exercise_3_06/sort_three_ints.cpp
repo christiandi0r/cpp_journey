@@ -35,9 +35,7 @@ void sort_three_nums(int num1, int num2, int num3)
 
 int main()
 {
-    int val1;
-    int val2;
-    int val3;
+    int val1, val2, val3;
     
     std::cout << "Enter three numbers so we can sort them in ascending order: ";
     std::cin >> val1 >> val2 >> val3;
