@@ -2,7 +2,7 @@
 #include <vector>
 #include <algorithm>
 
-int main ()
+int main()
 {
     std::vector<double> temps;
 
