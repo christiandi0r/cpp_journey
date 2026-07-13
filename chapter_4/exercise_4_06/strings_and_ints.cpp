@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 
+// Convert string to integer (e.g six to 6) 
 std::string string_to_int(std::vector<std::string>& vec)
 {
     int input = 0;
@@ -18,6 +19,7 @@ std::string string_to_int(std::vector<std::string>& vec)
     return vec.at(input);
 }
 
+// Convert integer to string (e.g 5 to five) 
 int int_to_string(std::vector<std::string>& vec)
 {
     int i = 0;
