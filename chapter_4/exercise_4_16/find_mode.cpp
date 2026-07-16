@@ -7,17 +7,10 @@ int main()
     
     int mode = 0;
     int count = 0;
-    int num = 0;
     int max = 0;
     
-    while (num != -1) 
-    { 
-        std::cin >> num;
-        
-        numbers.push_back(num); 
-    }
+    for (int num; std::cin >> num;) { numbers.push_back(num); }
     
-    mode = numbers.at(0);
     max = numbers.at(0);
 
     for (auto i : numbers) 
@@ -29,13 +22,19 @@ int main()
     
     for (int i = 0; i < numbers.size(); i++)
     {
-        counts.at(i)++;
+        counts.at(numbers.at(i))++;
     }
     
+    for (auto i : counts) { std::cout << i << " "; }
     
-    for (auto i : counts) { std::cout << " " << i; }
+    mode = counts.at(0);
     
-
+    for (int i = 0; i < counts.size(); i++)
+    {
+        if (counts.at(i) > mode) { mode = i; }
+    }
+    
+    std::cout << "\nThe mode is: " << mode << std::endl;
 
     return 0;
 }
