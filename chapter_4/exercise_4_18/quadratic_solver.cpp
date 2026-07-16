@@ -17,8 +17,6 @@ int main()
     
     std::cout << "Enter c: ";
     std::cin >> c;
-    
-    
-    
+
     return 0;
 }
