@@ -6,7 +6,6 @@ int main()
     double b = 0;
     double c = 0;
     
-    
     std::cout << "Quadratic Formula Solver (ax^2 + bx + c = 0)" << std::endl;
     
     std::cout << "Enter a: ";
