@@ -1,25 +1,11 @@
 #include <iostream>
 #include <cmath>
 
-int main()
+void solve_quadratic(double a, double b, double c)
 {
-    double a = 0;
-    double b = 0;
-    double c = 0;
     double x = 0;
     double x2 = 0;
     double discriminant = 0;
-    
-    std::cout << "Quadratic Formula Solver (ax^2 + bx + c = 0)" << std::endl;
-    
-    std::cout << "\nEnter a: ";
-    std::cin >> a;
-    
-    std::cout << "Enter b: ";
-    std::cin >> b;
-    
-    std::cout << "Enter c: ";
-    std::cin >> c;
     
     discriminant = (b * b) - (4 * a * c);
     
@@ -45,6 +31,26 @@ int main()
     
         std::cout << "\nx = " << realPart << " + " << imaginaryPart << "i, " << "x = " << realPart << " - " << imaginaryPart << "i" << std::endl; 
     }
+}
+
+int main()
+{
+    double a = 0;
+    double b = 0;
+    double c = 0;
+    
+    std::cout << "Quadratic Formula Solver (ax^2 + bx + c = 0)" << std::endl;
+    
+    std::cout << "\nEnter a: ";
+    std::cin >> a;
+    
+    std::cout << "Enter b: ";
+    std::cin >> b;
+    
+    std::cout << "Enter c: ";
+    std::cin >> c;
+    
+    solve_quadratic(a, b, c);
     
     return 0;
 }
