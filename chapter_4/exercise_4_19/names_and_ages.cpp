@@ -9,16 +9,25 @@ int main()
     std::string name;
     int age = 0;
 
-    std::cout << "Enter name and age (e.g Joe 17): ";
+    std::cout << "Enter name and age (e.g. Joe 17), input \"NoName 0\" to end program. " << std::endl;
+    std::cout << "Enter: ";
     std::cin >> name >> age;
+
+    names.push_back(name);
+    ages.push_back(age);
 
     while (name != "NoName" && age != 0)
     {
         std::cout << "Enter name and age (e.g Joe 17): ";
         std::cin >> name >> age;
+
+        names.push_back(name);
+        ages.push_back(age);
     }
+
+
     
-    
+    for (const auto& i : names) { std::cout << i << " "; }
     
     
     
