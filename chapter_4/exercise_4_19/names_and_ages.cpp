@@ -30,8 +30,5 @@ int main()
     
     for (int i = 0; i < names.size(); i++) { std::cout << names.at(i) << " " << ages.at(i) << std::endl; }
     
-    
-    
-    
     return 0;
 }
