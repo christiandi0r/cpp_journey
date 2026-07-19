@@ -4,16 +4,9 @@ double ctok(double c)
 {
     double k = c + 273.15;
 
-    if (c <= -273.15) 
-    {  
-        std::cout << "\nError please try again." << std::endl;
-    }
-
-    else
-    {
-        std::cout << "\nKelvin value: " << k << std::endl;
-    }
-        
+    if (c <= -273.15) { std::cout << "\nError please try again." << std::endl; }
+    else { std::cout << "\nKelvin value: " << k << std::endl; }
+     
     return k;
 }
 
