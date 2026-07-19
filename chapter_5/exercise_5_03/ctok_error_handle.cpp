@@ -9,8 +9,7 @@ double ctok(double c)
 
 int main()
 {
-    double c = 0;
-    double k = 0;
+    double c = 0, k = 0;
 
     char userChoice = ' ';
 
