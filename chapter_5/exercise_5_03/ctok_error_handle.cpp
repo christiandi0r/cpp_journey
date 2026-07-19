@@ -12,22 +12,31 @@ int main()
     double c = 0;
     double k = 0;
 
-    while (c >= -273.15)
+    char userChoice = ' ';
+
+    while (userChoice != 'n' && userChoice != 'N')
     {
         std::cout << "Input celsius value: ";
         std::cin >> c;
 
-        if (c <= -273.15) { std::cout << "Error please try again." << std::endl; }
+        if (c <= -273.15) 
+        {  
+            std::cout << "\nError please try again." << std::endl;
+
+            continue;
+        }
         
         else 
         { 
             k = ctok(c);
 
-            std::cout << "Kelvin value: " << k << std::endl;
+            std::cout << "\nKelvin value: " << k << std::endl;
         }
-        
-    }
 
+        std::cout << "\nWould you like to continue (y/n): ";
+        std::cin >> userChoice;
+        std::cout << "\n";
+    }
 
     return 0;
 }
