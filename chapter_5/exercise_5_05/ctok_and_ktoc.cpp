@@ -23,20 +23,35 @@ int main()
 {
     double c = 0, k = 0;
 
-    char userChoice = ' ';
+    int userChoice = 0;
+    
+    std::cout << "Choose an option below:" << std::endl;
+    std::cout << "1. Covert celsus to kelvin" << std::endl;
+    std::cout << "2. Convert kelvin to celius" << std::endl;
+    std::cout << "3. Quit program" << std::endl;
 
-    while (userChoice != 'n' && userChoice != 'N')
+    while (userChoice != 3)
     {
-        //std::cout << "Input celsius value: ";
-        //std::cin >> c;
         
-        std::cout << "Input kelvin value: ";
-        std::cin >> k;
+        
+        if (userChoice == 1)
+        {
+            std::cout << "Input celsius value: ";
+            std::cin >> c;
+            
+            ctok(c);
+        }
+        
+        else if (userChoice == 2)
+        {
+            std::cout << "Input kelvin value: ";
+            std::cin >> k;
+            
+            ktoc(k);
+        }
+        
 
-        //ctok(c);
-        ktoc(k);
-
-        std::cout << "\nWould you like to continue (y/n): ";
+        std::cout << "\nChoose option: ";
         std::cin >> userChoice;
         std::cout << "\n";
     }
