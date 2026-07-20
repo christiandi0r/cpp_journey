@@ -32,8 +32,6 @@ int main()
 
     while (userChoice != 3)
     {
-        
-        
         if (userChoice == 1)
         {
             std::cout << "Input celsius value: ";
@@ -50,7 +48,6 @@ int main()
             ktoc(k);
         }
         
-
         std::cout << "\nChoose option: ";
         std::cin >> userChoice;
         std::cout << "\n";
