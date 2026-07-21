@@ -11,8 +11,9 @@ class Person
         int _age;
 
     public:
-
+    
         Person();
+        
         Person(const std::string& name, int age);
             
         void setName(const std::string& name);
