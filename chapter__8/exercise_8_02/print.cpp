@@ -11,10 +11,19 @@ void print(const std::string& label, const std::vector<int>& vec)
 
 int main()
 {
-    std::vector<int> scores = {12, 4, 5, 87};
-    std::string label = "Scores";
+    std::vector<int> values;
+    std::string label;
     
-    print(label, scores);
+    std::cout << "Enter your label (e.g. Scores): ";
+    std::cin >> label;
+    
+    std::cout << "\nEnter values (input \'|\' to stop): ";
+    
+    for (int value; std::cin >> value;) { values.push_back(value); }
+    
+    std::cout << "\n"; 
+    
+    print(label, values);
 
     return 0;
 }
