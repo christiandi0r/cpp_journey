@@ -4,7 +4,7 @@
 
 void print(const std::string& label, const std::vector<int>& vec)
 {
-    std::cout << label <<": ";
+    std::cout << label << ": ";
     
     for (const auto& i : vec) { std::cout << i << " "; }
 }
