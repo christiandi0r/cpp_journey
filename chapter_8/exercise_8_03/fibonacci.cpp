@@ -15,10 +15,6 @@
 // ************************************************************
 std::vector<int> fibonacci(int x, int y, std::vector<int>& vec, int n)
 {
-    //vec.resize(n);
-    //vec.at(0) = x;
-    //vec.at(1) = y;
-    
     int next = 0;
     
     vec.push_back(x);
