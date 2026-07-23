@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-// ************************************************************
+// ***************************************************************
 //
 // @brief: since we pass-by-const-reference, we can only read the
 //         values within the vector and can't modify anything.
@@ -10,7 +10,7 @@
 //         2. Start for-loop from the back of vector being passed
 //         3. Copy values to new vector
 //
-// ************************************************************
+// ***************************************************************
 std::vector<int> reverse_vector(const std::vector<int>& v)
 {
     std::vector<int> newVec;
@@ -20,7 +20,7 @@ std::vector<int> reverse_vector(const std::vector<int>& v)
     return newVec;
 }
 
-// ************************************************************
+// ***************************************************************
 //
 // @brief: since we pass-by-reference, we are directly modifying
 //         the vector we are passing through argument.
@@ -29,7 +29,7 @@ std::vector<int> reverse_vector(const std::vector<int>& v)
 //         2. Compute middle and end of vector
 //         3. Swap values until we hit the middle point of vector
 //
-// ************************************************************
+// ***************************************************************
 void reverse_vector_swap(std::vector<int>& vec)
 {
     if (vec.empty()) { return; }
