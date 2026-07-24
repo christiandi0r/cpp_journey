@@ -20,21 +20,35 @@ void print_sorted(const std::vector<std::string>& names, const std::vector<int>&
         if (age > max_age) { max_age = age; }
     }
     
-    std::vector<int> ageTable(max_age + 1);
-    
-    for (const auto& i : ages) { ageTable[i]++; }
-    
-    for (int i = 0; i < ageTable.size(); i++)
+    std::vector<std::string> ageTable(max_age + 1);
+    std::vector<std::string> sortedNames = names;
+
+    for (int i = 0; i < ages.size(); i++) { ageTable[ages.at(i)] = names.at(i); }
+
+    sortedNames.resize(max_age + 1);
+
+    for (auto& name : sortedNames)
     {
-        std::cout << ageTable.at(i) << " ";
-        
-        if (ageTable.at(i) > 0)
-        {
-            for (int i = 0; )
+        if (name == "") { name = "~"; }
+    }
+
+    std::sort(sortedNames.begin(), sortedNames.end());
+
+    for (int i = 0; i < sortedNames.size(); i++)
+    {
+        if (sortedNames.at(i) != "~") 
+        { 
+            std::cout << sortedNames.at(i) << " age: ";
+            
+            for (int j = 0; j < ageTable.size(); j++)
+            {
+                if (sortedNames.at(i) == ageTable.at(j)) { std::cout << j; }
+            }
+
+            std::cout << "\n";
         }
     }
-    
- }
+}
 
 int main()
 {
