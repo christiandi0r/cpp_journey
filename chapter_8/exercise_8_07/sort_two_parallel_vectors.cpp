@@ -5,10 +5,7 @@
 
 void print_unsorted(const std::vector<std::string>& names, const std::vector<int>& ages)
 {
-    for (int i = 0; i < names.size(); i++)
-    {
-        std::cout << names.at(i) << " " << ages.at(i) << std::endl;
-    }
+    for (int i = 0; i < names.size(); i++) { std::cout << names.at(i) << " " << ages.at(i) << std::endl; }
 }
 
 void print_sorted(const std::vector<std::string>& names, const std::vector<int>& ages)
@@ -79,6 +76,5 @@ int main()
     
     print_sorted(names, ages);
     
-
     return 0;
 }
