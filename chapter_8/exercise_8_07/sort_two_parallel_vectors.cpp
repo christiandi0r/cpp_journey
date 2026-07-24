@@ -39,10 +39,8 @@ void print_sorted(const std::vector<std::string>& names, const std::vector<int>&
             
             for (int j = 0; j < ageTable.size(); j++)
             {
-                if (sortedNames.at(i) == ageTable.at(j)) { std::cout << j; }
+                if (sortedNames.at(i) == ageTable.at(j)) { std::cout << j << std::endl; }
             }
-
-            std::cout << "\n";
         }
     }
 }
