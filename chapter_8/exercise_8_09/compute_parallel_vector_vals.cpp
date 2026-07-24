@@ -25,7 +25,7 @@ int main()
 
     total = compute_groceries(prices, weights);
 
-    std::cout << "Total groceries: " << total << std::endl;
+    std::cout << "Total groceries: $" << total << std::endl;
 
     return 0;
 }
