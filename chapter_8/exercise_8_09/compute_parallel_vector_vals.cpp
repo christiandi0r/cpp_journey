@@ -32,9 +32,7 @@ int main()
     std::vector<double> prices = {3, 3, 3};
     std::vector<double> weights = {1, 1, 1};
 
-    double total = 0;
-
-    total = compute_groceries(prices, weights);
+    double total = compute_groceries(prices, weights);
 
     std::cout << "Total groceries: $" << total << std::endl;
 
