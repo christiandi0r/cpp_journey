@@ -3,7 +3,7 @@
 
 double compute_groceries(const std::vector<double>& prices, const std::vector<double>& weights)
 {
-    int total = 0;
+    double total = 0;
 
     if (weights.size() != prices.size()) 
     {  
