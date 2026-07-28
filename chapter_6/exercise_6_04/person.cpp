@@ -1,9 +1,9 @@
 #include "person.hpp"
 #include <iostream>
 
-Person::Person() : _name(" "), _age(0) {}
+Person::Person() : _name{" "}, _age{0} {}
 
-Person::Person(const std::string& name, int age) : _name(name), _age(age) {}
+Person::Person(const std::string& name, int age) : _name{name}, _age{age} {}
 
 void Person::setName(const std::string& name) { _name = name; }
 
