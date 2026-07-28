@@ -8,8 +8,6 @@ std::vector<int> num_chars_string(const std::vector<std::string>& words)
     
     for (const auto& word : words) { num_chars.push_back(word.size()); }
     
-    
-    
     return num_chars;
 }
 
@@ -17,7 +15,7 @@ int main()
 {
     std::vector<std::string> words = {"hey", "there"};
     
-    num_chars_string(words);
-
+    std::vector<int> num_chars = num_chars_string(words);
+    
     return 0;
 }
