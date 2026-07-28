@@ -12,7 +12,7 @@ T maxv(const std::vector<T> vec)
 
 int main()
 {
-
+    std::vector<int> nums;
 
     return 0;
 }
