@@ -5,11 +5,6 @@
 
 class Person
 {
-    private:
-        
-        std::string _name;
-        int _age;
-
     public:
 
         // Constructors
@@ -23,6 +18,11 @@ class Person
         // Functions for person's age
         void setAge(int age);
         int getAge() const;
+
+    private:
+        
+        std::string _name;
+        int _age;
 };
 
 #endif
