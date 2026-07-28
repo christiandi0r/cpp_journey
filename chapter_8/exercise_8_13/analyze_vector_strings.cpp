@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 
 std::vector<int> count_num_chars(const std::vector<std::string>& words)
 {
@@ -26,13 +27,25 @@ void longest_and_shortest_string(const std::vector<std::string>& words)
     std::cout << "Shortest word: " << shortest << std::endl;
 }
 
+void first_and_last_string(std::vector<std::string> words)
+{
+    std::sort(words.begin(), words.end());
+    
+    std::cout << "First word: " << words.front() << std::endl;
+    std::cout << "Last word: " << words.back() << std::endl;
+}
+
 int main()
 {
-    std::vector<std::string> words = {"hey", "there"};
+    std::vector<std::string> words = {"hey", "there", "yo", "cool"};
     
     std::vector<int> numChars = count_num_chars(words);
     
     longest_and_shortest_string(words);
+    
+    std::cout << "\n";
+    
+    first_and_last_string(words);
     
     return 0;
 }
