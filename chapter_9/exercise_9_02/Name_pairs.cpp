@@ -30,7 +30,6 @@ void Name_pairs::read_ages()
     }
 }
 
-
 void Name_pairs::print()
 {
     for (int i = 0; i < names.size(); i++) { std::cout << names.at(i) << " " << ages.at(i) << std::endl; }
@@ -47,10 +46,7 @@ void Name_pairs::sort()
     {
         for (int j = 0; j < namesCopy.size(); j++)
         {
-            if (namesCopy.at(j) == names.at(i))
-            {
-                agesCopy.push_back(ages.at(j));
-            }
+            if (namesCopy.at(j) == names.at(i)) { agesCopy.push_back(ages.at(j)); }
         }
     }
     
