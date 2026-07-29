@@ -1,6 +1,7 @@
 #include "Name_pairs.hpp"
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 void Name_pairs::read_names()
 {
@@ -35,4 +36,24 @@ void Name_pairs::print()
     for (int i = 0; i < names.size(); i++) { std::cout << names.at(i) << " " << ages.at(i) << std::endl; }
 }
 
-//void Name_pairs::sort();
+void Name_pairs::sort()
+{
+    std::vector<std::string> namesCopy = names;
+    std::vector<double> agesCopy(names.size());
+    
+    std::sort(names.begin(), names.end());
+    
+    for (int i = 0; i < names.size(); i++)
+    {
+        if (names.at(i) != namesCopy.at(i))
+        {
+            for (int j = 0; j < namesCopy.size(); j++)
+            {
+                
+            }
+        }
+    }
+    
+    
+    
+}
