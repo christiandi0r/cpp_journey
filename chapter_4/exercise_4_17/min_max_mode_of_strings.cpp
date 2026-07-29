@@ -4,11 +4,8 @@
 
 void min_and_max(std::vector<std::string>& words)
 {
-    std::string min = " ";
-    std::string max = " ";
-    
-    min = words.at(0); 
-    max = words.at(0);
+    std::string min = words.at(0);
+    std::string max = words.at(0);
     
     for (const auto& word : words) 
     {
