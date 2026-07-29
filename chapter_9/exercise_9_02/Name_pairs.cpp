@@ -23,7 +23,7 @@ void Name_pairs::read_ages()
     
     for (int i = 0; i < names.size(); i++)
     {
-        std::cout << "Enter " << names.at(i) << "'s " << "age: ";
+        std::cout << "\nEnter " << names.at(i) << "'s " << "age: ";
         std::cin >> age;
         
         ages.push_back(age);
