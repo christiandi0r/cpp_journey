@@ -9,9 +9,13 @@ int main()
     
     myPairs.read_ages();
     
+    std::cout << "\nBefore sorted: " << std::endl;
+    
     myPairs.print();
     
     myPairs.sort();
+    
+    std::cout << "\nAfter sorted: " << std::endl;
     
     myPairs.print();
     
