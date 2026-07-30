@@ -13,7 +13,7 @@ class Book
              const std::string& title, 
              const std::string& author
              const std::string& copyrightDate
-             ) : _ISBN
+             ) : _ISBN{ISBN}, _title{title}, _author{author}, _copyrightDate{copyrightDate} {}
              
     
     
