@@ -1,8 +1,6 @@
 #ifndef NAME_PAIRS_HPP
 #define NAME_PAIRS_HPP
 
-#include <string>
-
 class Name_pairs
 {
     public:
