@@ -1,8 +1,12 @@
+#include "book.hpp"
 #include <iostream>
+
 
 int main()
 {
-    std::cout<<"Hello World";
-
+    Book book1;
+    
+    book1.print_details();
+    
     return 0;
 }
