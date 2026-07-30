@@ -44,6 +44,16 @@ class Book
             if (_isCheckedOut) { std::cout << "Book is currently checked out." << std::endl; }
             else { std::cout << "Book is currently available." << std::endl; }
         }
+        
+        void print_details() 
+        {  
+            std::cout << "\nTitle: " << _title << std::endl;
+            std::cout << "Author: " << _author << std::endl;
+            std::cout << "Copyright Date: " << _copyrightDate << std::endl;
+            std::cout << "ISBN: " << _ISBN << std::endl;
+            std::cout << "Status: ";
+            book_status();
+        }
 
     private:
     
