@@ -46,7 +46,7 @@ class Book
         
         void print_details() 
         {  
-            std::cout << "\nTitle: " << _title << std::endl;
+            std::cout << "Title: " << _title << std::endl;
             std::cout << "Author: " << _author << std::endl;
             std::cout << "Copyright Date: " << _copyrightDate << std::endl;
             std::cout << "ISBN: " << _ISBN << std::endl;
