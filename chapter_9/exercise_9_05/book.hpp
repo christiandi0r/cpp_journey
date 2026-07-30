@@ -6,12 +6,12 @@
 class Book
 {
     public:
-    
+        // Add _isCheckedOut = false initializer 
         Book() : _ISBN{"n-n-n-x"}, _title{"Book Title"}, _author{"Book author"}, _copyrightDate{"YYYY-JAN-DD"} {}
         
         Book(const std::string& ISBN, 
              const std::string& title, 
-             const std::string& author
+             const std::string& author,
              const std::string& copyrightDate
              ) : _ISBN{ISBN}, _title{title}, _author{author}, _copyrightDate{copyrightDate} {}
         
@@ -36,12 +36,9 @@ class Book
         void checkout_book() { _isCheckedOut = true; }
         void return_book() { _isCheckedOut = false; }
         
-        // TO-DO: Implement these functions in book.cpp
+        // TO-DO: Implement this function
         void book_status();
-        void 
-        
-        
-    
+
     private:
     
         std::string _ISBN;
@@ -49,12 +46,6 @@ class Book
         std::string _author;
         std::string _copyrightDate;
         bool _isCheckedOut;
-        
-  
 };
-
-
-
-
 
 #endif
