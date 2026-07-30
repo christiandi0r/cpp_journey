@@ -7,7 +7,7 @@ class Book
 {
     public:
     
-        Book() : _ISBN{"n-n-n-x"}, _title{"Book Title"}, _author{"Joe Smith"}, _copyrightDate{"YYYY-JAN-DD"} {}
+        Book() : _ISBN{"n-n-n-x"}, _title{"Book Title"}, _author{"Book author"}, _copyrightDate{"YYYY-JAN-DD"} {}
         
         Book(const std::string& ISBN, 
              const std::string& title, 
