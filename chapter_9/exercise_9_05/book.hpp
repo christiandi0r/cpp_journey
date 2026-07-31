@@ -8,18 +8,14 @@ class Book
 {
     public:
         
-        Book() : _ISBN{"n-n-n-x"}, _title{"Book Title"}, _author{"Book author"}, _copyrightDate{"YYYY-JAN-DD"}, _isCheckedOut{false} {}
+        Book() : _title{"Book Title"}, _author{"Book author"}, _copyrightDate{"YYYY-JAN-DD"}, _ISBN{"n-n-n-x"}, _isCheckedOut{false} {}
         
-        Book(const std::string& ISBN, 
-             const std::string& title, 
+        Book(const std::string& title, 
              const std::string& author,
              const std::string& copyrightDate,
+             const std::string& ISBN,
              bool isCheckedOut
-             ) : _ISBN{ISBN}, _title{title}, _author{author}, _copyrightDate{copyrightDate}, _isCheckedOut{isCheckedOut} {}
-        
-        // ISBN setter and getter
-        void set_ISBN(const std::string& ISBN) { _ISBN = ISBN; }
-        std::string get_ISBN() const { return _ISBN; }
+             ) : _title{title}, _author{author}, _copyrightDate{copyrightDate}, _ISBN{ISBN}, _isCheckedOut{isCheckedOut} {}
         
         // Book title getter and setter
         void set_title(const std::string& title) { _title = title; }
@@ -32,6 +28,10 @@ class Book
         // Copyright date setter and getter
         void set_copyright_date(const std::string& copyrightDate) { _copyrightDate = copyrightDate; }
         std::string get_copyright_date() const { return _copyrightDate; }
+
+        // ISBN setter and getter
+        void set_ISBN(const std::string& ISBN) { _ISBN = ISBN; }
+        std::string get_ISBN() const { return _ISBN; }
         
         // Book checkout functions
         void checkout_book() { _isCheckedOut = true; }
@@ -56,10 +56,10 @@ class Book
 
     private:
     
-        std::string _ISBN;
         std::string _title;
         std::string _author;
         std::string _copyrightDate;
+        std::string _ISBN;
         bool _isCheckedOut;
 };
 
