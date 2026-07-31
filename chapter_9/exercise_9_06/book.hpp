@@ -48,8 +48,6 @@ class Book
 
         bool operator!=(const Book& rhs) const { return _ISBN != rhs._ISBN; }
 
-        
-        
         void print_details() 
         {  
             std::cout << "Title: " << _title << std::endl;
@@ -68,5 +66,14 @@ class Book
         std::string _ISBN;
         bool _isCheckedOut;
 };
+
+std::ostream& operator<<(std::ostream& os, const Book& book)
+{
+    os << "Title: " << book.get_title() << std::endl;
+    os << "Author: " << book.get_author() << std::endl;
+    os << "ISBN: " << book.get_ISBN() << std::endl;
+    
+    return os;
+}
 
 #endif
