@@ -12,6 +12,12 @@ int main()
     if (book1 == book2) { std::cout << "Books are the same." << std::endl; }
 
     else { std::cout << "Books are NOT the same." << std::endl; }
+
+    std::cout << "\n";
+
+    std::cout << book1 << std::endl;
+
+    std::cout << book2 << std::endl;
     
     return 0;
 }
