@@ -16,7 +16,7 @@ class Book
              const std::string& ISBN,
              bool isCheckedOut
              ) : _title{title}, _author{author}, _copyrightDate{copyrightDate}, _ISBN{ISBN}, _isCheckedOut{isCheckedOut} {}
-        
+         
         // Book title getter and setter
         void set_title(const std::string& title) { _title = title; }
         std::string get_title() const { return _title; }
@@ -43,6 +43,12 @@ class Book
             if (_isCheckedOut) { std::cout << "Book is currently checked out." << std::endl; }
             else { std::cout << "Book is currently available." << std::endl; }
         }
+
+        bool operator==(const Book& rhs) const { return _ISBN == rhs._ISBN; }
+
+        bool operator!=(const Book& rhs) const { return _ISBN != rhs._ISBN; }
+
+        
         
         void print_details() 
         {  
