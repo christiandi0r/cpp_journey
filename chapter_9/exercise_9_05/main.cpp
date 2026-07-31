@@ -7,7 +7,7 @@ int main()
 {
     Book book1;
 
-    Book book2("5-4-3-2-B", "PPP2", "Bjarne Stroutsoup", "2010 JUN 05", false);
+    Book book2("PPP2", "Bjarne Stroutsoup", "2010 JUN 05", "5-4-3-2-B", false);
     
     book1.print_details();
 
