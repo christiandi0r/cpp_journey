@@ -8,16 +8,17 @@ class Book
 {
     public:
         
-        Book() : _title{"Book Title"}, _author{"Book author"}, _copyrightDate{"YYYY-JAN-DD"}, _ISBN{"n-n-n-x"}, _isCheckedOut{false} {}
+        enum class Genre { Fiction, NonFiction, Periodical, Biography, Children };
+
+        Book() : _title{"Book Title"}, _author{"Book author"}, _copyrightDate{"YYYY-JAN-DD"}, _ISBN{"n-n-n-x"}, _genre{Genre::Fiction}, _isCheckedOut{false} {}
         
         Book(const std::string& title, 
              const std::string& author,
              const std::string& copyrightDate,
              const std::string& ISBN,
+             Genre genre,
              bool isCheckedOut
-             ) : _title{title}, _author{author}, _copyrightDate{copyrightDate}, _ISBN{ISBN}, _isCheckedOut{isCheckedOut} {}
-         
-        enum class Genre { Fiction, NonFiction, Periodical, Biography, Children };
+             ) : _title{title}, _author{author}, _copyrightDate{copyrightDate}, _ISBN{ISBN}, _genre{genre}, _isCheckedOut{isCheckedOut} {}
         
         // Book title getter and setter
         void set_title(const std::string& title) { _title = title; }
@@ -66,6 +67,7 @@ class Book
         std::string _author;
         std::string _copyrightDate;
         std::string _ISBN;
+        Genre _genre;
         bool _isCheckedOut;
 };
 
