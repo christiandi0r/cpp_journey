@@ -48,16 +48,6 @@ class Book
 
         bool operator!=(const Book& rhs) const { return _ISBN != rhs._ISBN; }
 
-        void print_details() 
-        {  
-            std::cout << "Title: " << _title << std::endl;
-            std::cout << "Author: " << _author << std::endl;
-            std::cout << "Copyright Date: " << _copyrightDate << std::endl;
-            std::cout << "ISBN: " << _ISBN << std::endl;
-            std::cout << "Status: ";
-            book_status();
-        }
-
     private:
     
         std::string _title;
