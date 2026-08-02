@@ -37,7 +37,7 @@ class Book
         std::string get_ISBN() const { return _ISBN; }
 
         // Genre getter and setter
-        void set_Genre(Genre genre) { _genre = genre; }
+        void set_genre(Genre genre) { _genre = genre; }
         Genre get_genre() const { return _genre; }
 
         std::string genre_to_string() const
@@ -58,7 +58,7 @@ class Book
         void return_book() { _isCheckedOut = false; }
         
         // Status if book is checked out or available
-        void book_status()
+        void book_status() const
         {
             if (_isCheckedOut) { std::cout << "Book is currently checked out." << std::endl; }
             else { std::cout << "Book is currently available." << std::endl; }
@@ -78,7 +78,7 @@ class Book
         bool _isCheckedOut;
 };
 
-std::ostream& operator<<(std::ostream& os, const Book& book)
+inline std::ostream& operator<<(std::ostream& os, const Book& book)
 {
     os << "Title: " << book.get_title() << std::endl;
     os << "Author: " << book.get_author() << std::endl;
