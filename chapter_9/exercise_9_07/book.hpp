@@ -35,6 +35,23 @@ class Book
         // ISBN setter and getter
         void set_ISBN(const std::string& ISBN) { _ISBN = ISBN; }
         std::string get_ISBN() const { return _ISBN; }
+
+        // Genre getter and setter
+        void set_Genre(Genre genre) { _genre = genre; }
+        Genre get_genre() const { return _genre; }
+
+        std::string genre_to_string() const
+        {
+            std::string genre = "Unknown";
+
+            if (_genre == Genre::Fiction) { genre = "Fiction"; }
+            else if (_genre == Genre::NonFiction) { genre = "NonFiction"; }
+            else if (_genre == Genre::Periodical) { genre = "Periodical"; }
+            else if (_genre == Genre::Biography) { genre = "Biography"; }
+            else if (_genre == Genre::Children) { genre = "Children"; }
+
+            return genre;
+        }
         
         // Book checkout functions
         void checkout_book() { _isCheckedOut = true; }
@@ -47,8 +64,8 @@ class Book
             else { std::cout << "Book is currently available." << std::endl; }
         }
 
+        // Operator overloading 
         bool operator==(const Book& rhs) const { return _ISBN == rhs._ISBN; }
-
         bool operator!=(const Book& rhs) const { return _ISBN != rhs._ISBN; }
 
     private:
@@ -66,6 +83,7 @@ std::ostream& operator<<(std::ostream& os, const Book& book)
     os << "Title: " << book.get_title() << std::endl;
     os << "Author: " << book.get_author() << std::endl;
     os << "ISBN: " << book.get_ISBN() << std::endl;
+    os << "Genre: " << book.genre_to_string() << std::endl;
     
     return os;
 }
