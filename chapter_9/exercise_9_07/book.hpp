@@ -17,6 +17,8 @@ class Book
              bool isCheckedOut
              ) : _title{title}, _author{author}, _copyrightDate{copyrightDate}, _ISBN{ISBN}, _isCheckedOut{isCheckedOut} {}
          
+        enum class Genre { Fiction, NonFiction, Periodical, Biography, Children };
+        
         // Book title getter and setter
         void set_title(const std::string& title) { _title = title; }
         std::string get_title() const { return _title; }
