@@ -44,11 +44,11 @@ class Book
         {
             std::string genre = "Unknown";
 
-            if (_genre == Genre::Fiction) { genre = "Fiction"; }
+            if      (_genre == Genre::Fiction)    { genre = "Fiction"; }
             else if (_genre == Genre::NonFiction) { genre = "NonFiction"; }
             else if (_genre == Genre::Periodical) { genre = "Periodical"; }
-            else if (_genre == Genre::Biography) { genre = "Biography"; }
-            else if (_genre == Genre::Children) { genre = "Children"; }
+            else if (_genre == Genre::Biography)  { genre = "Biography"; }
+            else if (_genre == Genre::Children)   { genre = "Children"; }
 
             return genre;
         }
