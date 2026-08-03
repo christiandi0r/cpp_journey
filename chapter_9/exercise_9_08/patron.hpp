@@ -28,7 +28,7 @@ class Patron
         void setLibraryFees(double libraryFees) { _libraryFees = libraryFees; }
         double getLibraryFees() const { return _libraryFees; }
         
-        bool doesPatronOweFees()
+        bool doesPatronOweFees() const
         {
             if (_libraryFees > 0) { std::cout << "Patron owes fees."; return true; }
             else { std::cout << "Patron does NOT owe fees."; return false; }
