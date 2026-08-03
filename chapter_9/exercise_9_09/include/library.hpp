@@ -8,8 +8,21 @@
 #include <vector>
 #include <string>
 
+class Library
+{
+    public:
 
+        struct Transaction 
+        { 
+            Book book; 
+            Patron patron;  
+        };
 
+    private:
 
+        std::vector<Transaction> transactions;
+        std::vector<Patron> patrons;
+        std::vector<Book> books;
+};
 
 #endif
