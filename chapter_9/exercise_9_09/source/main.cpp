@@ -3,9 +3,12 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <iomanip>
 
 int main()
 {
+    std::cout << std::fixed << std::setprecision(2);
+    
     Library huntington;
     
     // Demo book functions
@@ -26,7 +29,7 @@ int main()
     
     //huntington.checkout_book_from_lib(book2, patron1);
     
-    huntington.checkout_book_from_lib(book2, patron3);
+    huntington.checkout_book_from_lib(book2, patron2);
     
     //huntington.print_patrons();
     //huntington.print_books();
