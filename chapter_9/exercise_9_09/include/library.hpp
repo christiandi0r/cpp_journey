@@ -49,6 +49,15 @@ class Library
         void print_patrons() { for (const auto& patron : patrons) std::cout << patron << std::endl; }
         void print_transactions() { for (const auto& transaction : transactions) std::cout << transaction << std::endl; }
         
+        std::vector<std::string> patronsWhoOweFees(const std::vector<Patron>& patrons)
+        {
+            std::vector<std::string> patronsWhoOweFees;
+            
+            for (const auto& patron : patrons) { if (patron.getLibraryFees() > 0.00) patronsWhoOweFees.push_back(patron.getName()); }
+            
+            return patronsWhoOweFees;
+        }
+        
         friend std::ostream& operator<<(std::ostream& os, const Transaction& transaction)
         {
             os << "Name: " << transaction.patron.getName() << "\n";
