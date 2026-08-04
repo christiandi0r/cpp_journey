@@ -19,6 +19,7 @@ class Library
         };
 
         void add_book(const Book& book) { books.push_back(book); }
+        void add_patron(const Patron& patron) { patrons.push_back(patron); }
 
     private:
 
