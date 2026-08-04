@@ -33,6 +33,9 @@ class Patron
             else { std::cout << "Patron does NOT owe fees."; return false; }
         }
         
+        bool operator==(const Patron& rhs) const { return _name == rhs._name; }
+        bool operator!=(const Patron& rhs) const { return _name != rhs._name; }
+        
         friend std::ostream& operator<<(std::ostream& os, const Patron& patron)
         {
             os << "Name: " << patron._name << "\n";
