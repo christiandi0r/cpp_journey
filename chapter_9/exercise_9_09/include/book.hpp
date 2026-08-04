@@ -58,10 +58,10 @@ class Book
         void return_book() { _isCheckedOut = false; }
         
         // Status if book is checked out or available
-        void book_status() const
+        std::string book_status() const
         {
-            if (_isCheckedOut) { std::cout << "Book is currently checked out." << std::endl; }
-            else { std::cout << "Book is currently available." << std::endl; }
+            if (_isCheckedOut) { return "Book is currently checked out."; }
+            else { return "Book is NOT currently available."; }
         }
 
         // Operator overloading 
@@ -80,10 +80,11 @@ class Book
 
 inline std::ostream& operator<<(std::ostream& os, const Book& book)
 {
-    os << "Title: " << book.get_title() << std::endl;
-    os << "Author: " << book.get_author() << std::endl;
-    os << "ISBN: " << book.get_ISBN() << std::endl;
-    os << "Genre: " << book.genre_to_string() << std::endl;
+    os << "Title: " << book.get_title() << "\n";
+    os << "Author: " << book.get_author() << "\n";
+    os << "ISBN: " << book.get_ISBN() << "\n";
+    os << "Genre: " << book.genre_to_string() << "\n";
+    os << "Status: " << book.book_status() << "\n";
     
     return os;
 }
