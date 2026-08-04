@@ -29,6 +29,7 @@ class Library
         }
         
         void print_books() { for (const auto& book : books) std::cout << book << std::endl; }
+        void print_patrons() { for (const auto& patron : patrons) std::cout << patron << std::endl; }
         
     private:
 
