@@ -22,9 +22,11 @@ int main()
     //huntington.print_books();
     
     // Demo patron functions
-    Patron patron1("Christian", 98510345, 0.00, false);
+    Patron patron1("Christian", 98510345, 0.00);
+    Patron patron2("Mike", 96578022, 10.50);
     
     huntington.add_patron(patron1);
+    huntington.add_patron(patron2);
     
     huntington.print_patrons();
     
