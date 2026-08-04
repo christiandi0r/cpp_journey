@@ -18,14 +18,6 @@ class Library
             Patron patron;  
         };
         
-        friend std::ostream& operator<<(std::ostream& os, const Transaction& transaction)
-        {
-            os << "Name: " << transaction.patron.getName() << "\n";
-            os << "Book: " << transaction.book.get_title() << "\n";
-            
-            return os;
-        }
-
         void add_book(const Book& book) { books.push_back(book); }
         
         void add_patron(const Patron& patron) { patrons.push_back(patron); }
@@ -55,6 +47,14 @@ class Library
         void print_books() { for (const auto& book : books) std::cout << book << std::endl; }
         void print_patrons() { for (const auto& patron : patrons) std::cout << patron << std::endl; }
         void print_transactions() { for (const auto& transaction : transactions) std::cout << transaction << std::endl; }
+        
+        friend std::ostream& operator<<(std::ostream& os, const Transaction& transaction)
+        {
+            os << "Name: " << transaction.patron.getName() << "\n";
+            os << "Book: " << transaction.book.get_title() << "\n";
+            
+            return os;
+        }
         
     private:
 
