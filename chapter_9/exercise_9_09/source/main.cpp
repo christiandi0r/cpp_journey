@@ -26,6 +26,8 @@ int main()
     
     huntington.add_patron(patron1);
     
+    huntington.print_patrons();
+    
     
     return 0;
 }
