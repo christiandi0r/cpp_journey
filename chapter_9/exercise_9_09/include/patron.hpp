@@ -33,6 +33,15 @@ class Patron
             if (_libraryFees > 0) { std::cout << "Patron owes fees."; return true; }
             else { std::cout << "Patron does NOT owe fees."; return false; }
         }
+        
+        friend std::ostream& operator<<(std::ostream& os, const Patron& patron)
+        {
+            os << "Name: " << patron._name << "\n";
+            os << "ID: " << patron._libraryCardNum << "\n";
+            os << "Fees owed: " << patron._libraryFees << "\n";
+            
+            return os;
+        }
     
     private:
 
