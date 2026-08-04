@@ -25,7 +25,7 @@ class Library
         void checkout_book_from_lib(Book& book, Patron& patron)
         { 
             if (patron.getName() == "Unknown") { std::cout << "Error: Person does NOT have library membership." << std::endl; }
-            if (patron.getLibraryFees() > 0) { std::cout << "Error: Person owes fees. Pleae pay $" << patron.getLibraryFees() << " before checking out another book." << std::endl; } 
+            if (patron.getLibraryFees() > 0.00) { std::cout << "Error: Person owes fees. Pleae pay $" << patron.getLibraryFees() << " before checking out another book." << std::endl; } 
             
             for (auto& i : books) 
             { 
