@@ -60,8 +60,8 @@ class Book
         // Status if book is checked out or available
         std::string book_status() const
         {
-            if (_isCheckedOut) { return "Book is currently checked out."; }
-            else { return "Book is NOT currently available."; }
+            if (_isCheckedOut) { return "Book is NOT currently available."; }
+            else { return "Book is currently available."; }
         }
 
         // Operator overloading 
