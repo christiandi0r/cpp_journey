@@ -4,8 +4,6 @@
 #include <vector>
 #include <string>
 
-
-
 int main()
 {
     Library huntington;
