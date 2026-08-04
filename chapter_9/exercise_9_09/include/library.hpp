@@ -12,11 +12,13 @@ class Library
 {
     public:
 
-        struct Transaction 
+        struct Transaction
         { 
             Book book; 
             Patron patron;  
         };
+
+        void add_book(const Book& book) { books.push_back(book); }
 
     private:
 
