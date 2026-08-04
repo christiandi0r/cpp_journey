@@ -23,14 +23,13 @@ class Library
         
         void add_patron(const Patron& patron) { patrons.push_back(patron); }
         
-        void checkout_book(const Book& checkoutBook) { books.erase(std::remove(books.begin(), books.end(), checkoutBook), books.end()); }
-        
-        void print_books()
-        {
-            for (const auto& i : books) { std::cout << i << std::endl; }
+        void checkout_book_from_lib(Book& book)
+        { 
+            for (auto& i : books) { if (i == book) i.checkout_book(); }
         }
         
-
+        void print_books() { for (const auto& book : books) std::cout << book << std::endl; }
+        
     private:
 
         std::vector<Transaction> transactions;
