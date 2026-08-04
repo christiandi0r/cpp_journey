@@ -12,8 +12,7 @@ class Patron
 
         Patron(const std::string& name,
                int libraryCardNum,
-               double libraryFees,
-               bool owesFees
+               double libraryFees
                ) : _name{name}, _libraryCardNum{libraryCardNum}, _libraryFees{libraryFees} {}
         
         // Patron's name setter and getter
