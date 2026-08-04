@@ -29,11 +29,22 @@ int main()
     
     //huntington.checkout_book_from_lib(book2, patron1);
     
-    huntington.checkout_book_from_lib(book2, patron2);
+    //huntington.checkout_book_from_lib(book2, patron2);
     
     //huntington.print_patrons();
     //huntington.print_books();
     //huntington.print_transactions();
+    
+    std::vector<Patron> patrons;
+    std::vector<std::string> peopleWhoOweFees;
+    
+    patrons.push_back(patron1);
+    patrons.push_back(patron2);
+    patrons.push_back(patron3);
+    
+    peopleWhoOweFees = huntington.patronsWhoOweFees(patrons);
+    
+    for (const auto& patron : peopleWhoOweFees) { std::cout << patron << " "; }
     
     return 0;
 }
