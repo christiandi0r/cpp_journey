@@ -8,11 +8,9 @@ class Rational
     
     
     private:
-  
-  
+        
+        int numerator;
+        int denominator;
 };
-
-
-
 
 #endif
