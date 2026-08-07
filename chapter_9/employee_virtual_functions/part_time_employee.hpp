@@ -9,12 +9,12 @@ class PartTimeEmployee : public Employee
 {
     public:
 
-        PartTimeEmployee() : _hourlyWage{0}, _monthlyHours{0} {}
+        PartTimeEmployee() : Employee{"Name", 0}, _hourlyWage{0}, _monthlyHours{0} {}
 
         PartTimeEmployee(const std::string& name,
                          double hourlyWage,
                          double monthlyHours
-                         ) : _name{name}, _hourlyWage{hourlyWage}, _monthlyHours{monthlyHours} {}
+                         ) : Employee{name, 0}, _hourlyWage{hourlyWage}, _monthlyHours{monthlyHours} {}
 
         void setName(const std::string& name) { _name = name; }
         std::string getName() const { return _name; }
