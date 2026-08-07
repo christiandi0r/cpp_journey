@@ -1,5 +1,5 @@
 # C++ Journey
-Just my journey on improving my programming skills by practicing C++.
+Just my journey on improving my programming skills by practicing C++. :D
 
 Included are my attempts of the exercises from:
 
