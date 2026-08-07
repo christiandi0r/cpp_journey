@@ -11,11 +11,21 @@ base classes, and method overriding.
 - Derived Class (PartTimeEmployee): Inherits from Employee. Stores an hourly wage and the number of hours worked. Overrides calculatePay() to return wage times hours.
 
 *******************************************************************************/
+#include "part_time_employee.hpp"
+#include "full_time_employee.hpp"
+
 #include <iostream>
 
 int main()
 {
-    std::cout<<"Hello World";
+    FullTimeEmployee FTemployee1;
+    PartTimeEmployee PTemployee1("Brian", 32, 119.96);
 
+    FTemployee1.setName("Christian");
+    FTemployee1.setMonthlySalary(3500);
+
+    std::cout << "Christian's monthly earnings: " << FTemployee1.calculatePay() << std::endl;
+    std::cout << "Brian's monthly earnings: " << PTemployee1.calculatePay() << std::endl;
+    
     return 0;
 }
