@@ -8,7 +8,9 @@ class Employee
 {
     public:
         
-        void calculatePay() = 0;
+        Employee() : _name{"Name"}, _employeeNumber{0} {}
+        
+        virtual void calculatePay() const = 0;
         
     protected:
     
