@@ -8,7 +8,7 @@ base classes, and method overriding.
 
 - Derived Class (FullTimeEmployee): Inherits from Employee. Stores a fixed monthly salary. Overrides calculatePay() to return this fixed salary.
 
-- PartTimeEmployee): Inherits from Employee. Stores an hourly wage and the number of hours worked. Overrides calculatePay() to return wage times hours.
+- Derived Class (PartTimeEmployee): Inherits from Employee. Stores an hourly wage and the number of hours worked. Overrides calculatePay() to return wage times hours.
 
 *******************************************************************************/
 #include <iostream>
