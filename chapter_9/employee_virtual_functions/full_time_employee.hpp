@@ -8,9 +8,9 @@ class FullTimeEmployee : public Employee
 {
     public:
 
-        FullTimeEmployee() : _name{"Name"}, _monthlySalary{0} {}
+        FullTimeEmployee() : Employee{"Name", 0}, _monthlySalary{0} {}
 
-        FullTimeEmployee(std::string name, double monthlySalary) : _name{name}, _monthlySalary{monthlySalary} {}
+        FullTimeEmployee(std::string name, double monthlySalary) : Employee{name, 0}, _monthlySalary{monthlySalary} {}
 
         // Full-time employee name functions
         void setName(const std::string& name) { _name = name; }
@@ -23,7 +23,6 @@ class FullTimeEmployee : public Employee
        
     private:
 
-        std::string _name;
         double _monthlySalary;
 };
 
