@@ -12,11 +12,11 @@ class FullTimeEmployee : public Employee
 
         FullTimeEmployee(std::string name, double monthlySalary) : _name{name}, _monthlySalary{monthlySalary} {}
 
-        // Full time employee name functions
+        // Full-time employee name functions
         void setName(const std::string& name) { _name = name; }
         std::string getName() const { return _name; }
 
-        // Full time employee salary functions
+        // Full-time employee salary functions
         void setMonthlySalary(double monthlySalary) { _monthlySalary = monthlySalary; }
         double getMonthlySalary() const { return _monthlySalary; }
         double calculatePay() const override {  return _monthlySalary; }
