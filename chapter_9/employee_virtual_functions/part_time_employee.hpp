@@ -25,7 +25,7 @@ class PartTimeEmployee : public Employee
         
         // Part-time employee monthly hours worked functions
         void setMonthlyHours(double monthlyHours) { _monthlyHours = monthlyHours; }
-        double getHourlyWage() const { return _monthlyHours; }
+        double getHourlyHours() const { return _monthlyHours; }
 
         double calculatePay() const override { return _hourlyWage * _monthlyHours; }
 
