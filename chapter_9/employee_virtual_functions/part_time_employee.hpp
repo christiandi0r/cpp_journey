@@ -31,7 +31,6 @@ class PartTimeEmployee : public Employee
 
     private:
 
-        std::string _name;
         double _hourlyWage;
         double _monthlyHours;
 };
