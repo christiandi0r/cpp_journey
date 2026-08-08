@@ -11,6 +11,7 @@ class Employee
         
         Employee(std::string name, int employeeNumber) : _name{name}, _employeeNumber{employeeNumber} {}
         
+        // Pure virtual function
         virtual double calculatePay() const = 0;
         
     protected:
