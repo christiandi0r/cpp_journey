@@ -9,6 +9,9 @@ class IMU
                 _wx{0.0}, _wy{0.0}, _wz{0.0}, 
                 _isInitialized{false}, _isCalibrated{false}, _isSensorHealthy{true} {}
 
+        void initialize();
+        void calibrate();
+       
     private:
 
         double _ax, _ay, _az;
