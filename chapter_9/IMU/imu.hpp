@@ -12,9 +12,9 @@ class IMU
         void initialize();
         void calibrate();
         
-        bool isInitialized();
-        bool isCalibrated();
-        bool isSensorHealthy();
+        bool isInitialized() const;
+        bool isCalibrated() const;
+        bool isSensorHealthy() const;
        
     private:
 
