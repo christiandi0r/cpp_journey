@@ -7,5 +7,5 @@ void IMU::initialize()
 
 void IMU::calibrate()
 {
-    
+    if (_isSensorHealthy == true && _isInitialized == true) { _isCalibrated = true; }
 }
