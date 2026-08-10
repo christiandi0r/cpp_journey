@@ -15,6 +15,7 @@ class IMU
         bool isInitialized() const;
         bool isCalibrated() const;
         bool isSensorHealthy() const;
+        bool measurementsValid() const;
        
     private:
 
