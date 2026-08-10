@@ -15,3 +15,6 @@ bool IMU::isInitialized() const { return _isInitialized; }
 bool IMU::isCalibrated() const { return _isCalibrated; }
 
 bool IMU::isSensorHealthy() const { return _isSensorHealthy; }
+
+bool IMU::measurementsValid() const { return _isInitialized && _isCalibrated && _isSensorHealthy; }
+
