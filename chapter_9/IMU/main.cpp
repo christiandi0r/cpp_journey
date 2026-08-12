@@ -24,7 +24,6 @@ TO-DO:
 
 int main()
 {
-    
-    
+
     return 0;
 }
