@@ -7,4 +7,4 @@ _Programming: Principles and Practice Using C++ (2nd Edition)_ by Bjarne Stroust
 
 PDF of the book: https://dl.icdst.org/pdfs/files3/fef0590f02fa06bb42cba558fbc9e51c.pdf
 
-We do not vibe code here. 
+We do not vibe code here. Vibe coding is a mind virus that we must prevent.
