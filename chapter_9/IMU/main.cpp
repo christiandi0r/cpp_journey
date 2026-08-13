@@ -19,6 +19,7 @@ TO-DO:
 - tell whether its measurements are valid
 
 *******************************************************************************/
+#include "imu.hpp"
 
 #include <iostream>
 
