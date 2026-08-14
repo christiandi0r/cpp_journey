@@ -19,6 +19,13 @@ class IMU
 
         void updateMeasurements(double ax, double ay, double az,
                                 double wx, double wy, double wz);
+        
+        double getax() const { return _ax; }
+        double getay() const { return _ay; }
+        double getaz() const { return _az; }
+        double getwx() const { return _wx; }
+        double getwy() const { return _wy; }
+        double getwz() const { return _wz; }
 
     private:
 
