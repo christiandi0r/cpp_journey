@@ -16,6 +16,7 @@ class IMU
         bool isCalibrated() const;
         bool isSensorHealthy() const;
         bool measurementsValid() const;
+        bool reportFault();
 
         void updateMeasurements(double ax, double ay, double az,
                                 double wx, double wy, double wz);
