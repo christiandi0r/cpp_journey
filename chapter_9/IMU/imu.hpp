@@ -17,8 +17,8 @@ class IMU
         bool isSensorHealthy() const;
         bool measurementsValid() const;
 
-        void updateMeasurements( double ax, double ay, double az,
-                                 double wx, double wy, double wz);
+        void updateMeasurements(double ax, double ay, double az,
+                                double wx, double wy, double wz);
 
     private:
 
