@@ -7,7 +7,7 @@ void IMU::initialize()
 
 void IMU::calibrate()  
 {
-    if (_isSensorHealthy == true && _isInitialized == true)  { _isCalibrated = true; }
+    if (_isSensorHealthy && _isInitialized)  { _isCalibrated = true; }
 }
 
 bool IMU::isInitialized() const { return _isInitialized; }
@@ -18,3 +18,16 @@ bool IMU::isSensorHealthy() const { return _isSensorHealthy; }
 
 bool IMU::measurementsValid() const { return _isInitialized && _isCalibrated && _isSensorHealthy; }
 
+void IMU::updateMeasurements(double ax, double ay, double az, double wx, double wy, double wz)
+{
+    if (measurementsValid())
+    {
+        _ax = ax;
+        _ay = ay;
+        _az = az;
+        _wx = wx;
+        _wy = wy;
+        _wz = wz;
+    }
+
+}
