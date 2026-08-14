@@ -29,5 +29,4 @@ void IMU::updateMeasurements(double ax, double ay, double az, double wx, double 
         _wy = wy;
         _wz = wz;
     }
-
 }
