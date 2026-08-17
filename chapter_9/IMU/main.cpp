@@ -25,6 +25,7 @@ TO-DO:
 
 int main()
 {
-
+    IMU ASM330DHCX;
+    
     return 0;
 }
