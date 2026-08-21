@@ -3,10 +3,10 @@
 
 std::string cat_dot(const std::string& s1, const std::string& s2)
 {
-    std::string s3 = ".";
+    std::string dot = ".";
     std::string s4;
 
-    s4 = s1 + s3 + s2;
+    s4 = s1 + dot + s2;
 
     return s4;
 }
